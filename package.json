@@ -1,17 +1,19 @@
 {
-  "name": "lazorkit-test",
-  "version": "0.1.0",
+  "name": "lazorkit-examples",
+  "version": "1.0.0",
   "private": true,
+  "description": "Example repository demonstrating Lazorkit SDK for passkey-based wallet authentication on Solana",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
-    "@coral-xyz/anchor": "^0.31.1",
     "@lazorkit/wallet": "^2.0.1",
+    "@solana/spl-token": "^0.4.14",
     "@solana/web3.js": "^1.98.4",
+    "buffer": "^6.0.3",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
@@ -25,5 +27,14 @@
     "eslint-config-next": "16.1.1",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "keywords": [
+    "lazorkit",
+    "solana",
+    "passkey",
+    "wallet",
+    "web3",
+    "nft",
+    "metaplex"
+  ]
 }

@@ -71,3 +71,39 @@ export const LogOutIcon = ({ className }: { className?: string }) => (
         <line x1="21" x2="9" y1="12" y2="12" />
     </svg>
 );
+
+export const SwapIcon = ({ className }: { className?: string }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <path d="M7 10L12 15L17 10" />
+        <path d="M17 14L12 9L7 14" className="rotate-180 origin-center translate-y-[2px]" />
+        {/* Simple up down arrows */}
+        <path d="M7 20V4" />
+        <path d="M17 4V20" />
+        <path d="M21 16L17 20L13 16" />
+        <path d="M3 8L7 4L11 8" />
+    </svg>
+);
+
+export const ChevronDownIcon = ({ className }: { className?: string }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <path d="M6 9l6 6 6-6" />
+    </svg>
+);
