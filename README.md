@@ -1,200 +1,93 @@
 # Lazorkit SDK Examples
 
-A comprehensive collection of examples demonstrating how to use the [Lazorkit SDK](https://lazorkit.com) for passkey-based wallet authentication on Solana.
-
-![Lazorkit Examples](https://placehold.co/1200x400/1a1a2e/ff6b6b?text=Lazorkit+SDK+Examples)
-
-## 🔐 What is Lazorkit?
-
-Lazorkit is a passkey wallet infrastructure for Solana that enables:
-
-- **No seed phrases** - Users authenticate with biometrics (Face ID, Touch ID, Windows Hello)
-- **Smart wallets** - Program-controlled wallets with advanced features
-- **Gasless transactions** - Paymaster service sponsors transaction fees
-- **Seamless UX** - Web2-like experience for blockchain applications
-
-## 📚 Examples
-
-This repository contains three progressive examples that build upon each other:
-
-### [Example 1: Smart Wallet & Authentication](./app/examples/01-smart-wallet/README.md)
-
-Learn the fundamentals of Lazorkit wallet integration:
-
-- Setting up `LazorkitProvider`
-- Using the `useWallet` hook
-- Creating and connecting passkey wallets
-- Displaying wallet information
-
-**Key Concepts:** Passkeys, Smart Wallets, Provider Setup
-
----
-
-### [Example 2: Gasless SOL Transfer](./app/examples/02-gasless-transfer/README.md)
-
-Learn to send SOL without users paying gas fees:
-
-- Building Solana transaction instructions
-- Using `signAndSendTransaction` with paymaster
-- Handling transaction confirmations
-- Error handling best practices
-
-**Key Concepts:** Paymaster, Transaction Instructions, Gasless Flow
-
----
-
-### [Example 3: NFT Creation & Minting](./app/examples/03-nft-minting/README.md)
-
-Learn to create and mint NFTs using Metaplex:
-
-- Understanding NFT structure on Solana
-- Building Metaplex minting instructions
-- Handling multi-signer transactions
-- Working with metadata and editions
-
-**Key Concepts:** Metaplex, Token Metadata, Master Editions
-
----
+Complete examples demonstrating passkey-based wallet authentication on Solana, for both web and mobile platforms.
 
 ## 🚀 Quick Start
 
-### Prerequisites
-
-- Node.js 18 or later
-- A browser that supports passkeys (Chrome, Safari, Firefox, Edge)
-- (Optional) Devnet SOL for testing transfers/minting
-
-### Installation
+### Web (Next.js)
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/lazorkit-examples.git
-cd lazorkit-examples
-
-# Install dependencies
+cd web
 npm install
-
-# Start development server
 npm run dev
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the examples.
+### Mobile (Expo/React Native)
 
-### Getting Devnet SOL
+```bash
+cd mobile
+npm install
+npx expo start
+# Scan QR code with Expo Go app
+```
 
-For Examples 2 and 3, you'll need devnet SOL. Get some from:
+## 📱 Test Mobile on Your Phone
 
-1. [Solana Faucet](https://faucet.solana.com/)
-2. Paste your wallet address (shown in Example 1)
-3. Request an airdrop
+1. **Download Expo Go** - [iOS](https://apps.apple.com/app/expo-go/id982107779) | [Android](https://play.google.com/store/apps/details?id=host.exp.exponent)
+2. **Run** `cd mobile && npx expo start`
+3. **Scan the QR code** with your camera (iOS) or Expo Go app (Android)
 
 ## 📁 Project Structure
 
 ```
 lazorkit-examples/
-├── app/
-│   ├── page.tsx                 # Landing page
-│   ├── layout.tsx               # Root layout with providers
-│   ├── providers.tsx            # Lazorkit provider setup
-│   │
-│   ├── components/              # Shared React components
-│   │   ├── Navigation.tsx       # Example navigation
-│   │   ├── WalletStatus.tsx     # Wallet connection UI
-│   │   ├── PageLayout.tsx       # Page wrapper component
-│   │   └── icons.tsx            # SVG icons
-│   │
-│   ├── lib/                     # Utilities
-│   │   ├── constants.ts         # Shared constants
-│   │   └── solana-utils.ts      # Solana helpers
-│   │
-│   └── examples/
-│       ├── 01-smart-wallet/     # Example 1
-│       │   ├── page.tsx
-│       │   └── README.md
-│       │
-│       ├── 02-gasless-transfer/ # Example 2
-│       │   ├── page.tsx
-│       │   └── README.md
-│       │
-│       └── 03-nft-minting/      # Example 3
-│           ├── page.tsx
-│           ├── README.md
-│           └── utils/
-│               └── metaplex.ts  # NFT utilities
+├── web/                    # Next.js web app
+│   ├── app/
+│   │   ├── examples/       # 3 web examples
+│   │   ├── components/     # Shared components
+│   │   └── lib/            # Utilities
+│   └── package.json
 │
-├── package.json
-└── README.md
+├── mobile/                 # Expo React Native app
+│   ├── app/
+│   │   ├── (tabs)/         # Tab-based examples
+│   │   └── _layout.tsx     # Root layout
+│   ├── lib/                # Utilities
+│   └── package.json
+│
+└── README.md               # This file
 ```
 
-## 🔧 Configuration
+## 🎯 Examples
 
-### Lazorkit Provider
+### Web Examples
 
-The Lazorkit provider is configured in `app/providers.tsx`:
+| # | Example | Description |
+|---|---------|-------------|
+| 1 | Smart Wallet | Create & connect passkey-based wallet |
+| 2 | Gasless Transfer | Send SOL without paying fees |
+| 3 | NFT Minting | Create NFTs with Metaplex |
 
-```typescript
-import { LazorkitProvider } from "@lazorkit/wallet";
+### Mobile Examples
 
-const config = {
-  rpcUrl: "https://api.devnet.solana.com",
-  portalUrl: "https://portal.lazor.sh",
-  paymasterConfig: {
-    paymasterUrl: "https://kora.devnet.lazorkit.com"
-  }
-};
+| # | Example | Description |
+|---|---------|-------------|
+| 1 | Connect | Passkey wallet authentication |
+| 2 | Balance | View SOL balance |
+| 3 | Send | Transfer SOL with passkey |
 
-<LazorkitProvider {...config}>
-  {children}
-</LazorkitProvider>
-```
+## 🔧 Prerequisites
 
-### Network
+- **Node.js 18+** for local development
+- **Modern browser** with passkey support (Chrome, Safari, Edge, Firefox)
+- **Expo Go app** for mobile testing (iOS/Android)
+- **Devnet SOL** from [Solana Faucet](https://faucet.solana.com)
 
-All examples use **Solana Devnet**. To use a different network, update `app/lib/constants.ts`.
+## 📚 Technologies
 
-## 🛠️ Technologies Used
-
-- **[Next.js 14](https://nextjs.org/)** - React framework
-- **[Lazorkit SDK](https://lazorkit.com/)** - Passkey wallet infrastructure
-- **[Solana Web3.js](https://solana-labs.github.io/solana-web3.js/)** - Solana JavaScript SDK
-- **[SPL Token](https://spl.solana.com/)** - Token program utilities
-- **[Metaplex](https://metaplex.com/)** - NFT standard for Solana
-- **[TailwindCSS](https://tailwindcss.com/)** - Utility-first CSS
-
-## 📖 Learning Path
-
-We recommend following the examples in order:
-
-1. **Start with Example 1** to understand wallet basics
-2. **Move to Example 2** to learn transaction handling
-3. **Complete with Example 3** for advanced NFT operations
-
-Each example's README contains:
-- Detailed code walkthroughs
-- API references
-- Best practices
-- Common issues and solutions
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📄 License
-
-MIT License - see [LICENSE](./LICENSE) for details.
+- **Lazorkit SDK** - Passkey authentication for Solana
+- **Next.js 16** - Web framework
+- **Expo** - React Native framework
+- **@solana/web3.js** - Solana JavaScript SDK
+- **Metaplex** - NFT standard (web only)
 
 ## 🔗 Resources
 
 - [Lazorkit Documentation](https://docs.lazorkit.com)
-- [Lazorkit GitHub](https://github.com/lazor-kit)
-- [Solana Documentation](https://docs.solana.com)
-- [Metaplex Documentation](https://docs.metaplex.com)
 - [Solana Faucet](https://faucet.solana.com)
+- [Solana Explorer](https://explorer.solana.com?cluster=devnet)
+- [Metaplex Documentation](https://docs.metaplex.com)
 
 ---
 
