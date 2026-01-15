@@ -2,6 +2,27 @@
 
 Complete examples demonstrating passkey-based wallet authentication on Solana, for both web and mobile platforms.
 
+Try the examples live at [Lazorkit Examples](https://lazorkit-tsmboa.vercel.app/).
+
+Also read the detailed substack articles here:
+
+Chapter 1: [Introduction to secp256r1 standard, solana precompile, smart wallets & how to implement connect button](https://open.substack.com/pub/tsmboa/p/unlocking-solanas-future-passkeys)
+
+Chapter 2: [Introduction to paymaster and example on gasless SOL transfer](https://open.substack.com/pub/tsmboa/p/unlocking-solanas-future-passkeys-091)
+
+Chapter 3: [Introduction to NFT creation and minting](https://open.substack.com/pub/tsmboa/p/unlocking-solanas-future-passkeys-092)
+
+![Lazorkit Examples](https://placehold.co/1200x400/1a1a2e/ff6b6b?text=Lazorkit+SDK+Examples)
+
+## 🔐 What is Lazorkit?
+
+Lazorkit is a passkey wallet infrastructure for Solana that enables:
+
+- **No seed phrases** - Users authenticate with biometrics (Face ID, Touch ID, Windows Hello)
+- **Smart wallets** - Program-controlled wallets with advanced features
+- **Gasless transactions** - Paymaster service sponsors transaction fees
+- **Seamless UX** - Web2-like experience for blockchain applications
+
 ## 🚀 Quick Start
 
 ### Web (Next.js)
