@@ -81,7 +81,7 @@ export default function HomeScreen() {
         {/* Example 1: Connect */}
         <TouchableOpacity
           style={styles.exampleCard}
-          onPress={() => router.push("/connect")}
+          onPress={() => router.push("/01-connect-wallet")}
         >
           <View style={styles.exampleIcon}>
             <FontAwesome name="lock" size={24} color={Colors.primary} />
@@ -99,7 +99,7 @@ export default function HomeScreen() {
         {/* Example 2: Balance */}
         <TouchableOpacity
           style={styles.exampleCard}
-          onPress={() => router.push("/balance")}
+          onPress={() => router.push("/02-check-balance")}
         >
           <View style={styles.exampleIcon}>
             <FontAwesome name="credit-card" size={24} color={Colors.info} />
@@ -117,7 +117,7 @@ export default function HomeScreen() {
         {/* Example 3: Send */}
         <TouchableOpacity
           style={styles.exampleCard}
-          onPress={() => router.push("/send")}
+          onPress={() => router.push("/03-send-sol")}
         >
           <View style={styles.exampleIcon}>
             <FontAwesome name="send" size={24} color={Colors.success} />

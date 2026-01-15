@@ -82,11 +82,11 @@ lazorkit-examples/
 
 ### Mobile Examples
 
-| # | Example | Description |
-|---|---------|-------------|
-| 1 | Connect | Passkey wallet authentication |
-| 2 | Balance | View SOL balance |
-| 3 | Send | Transfer SOL with passkey |
+| # | File | Description |
+|---|------|-------------|
+| 1 | `01-connect-wallet.tsx` | Passkey wallet authentication |
+| 2 | `02-check-balance.tsx` | View SOL balance |
+| 3 | `03-send-sol.tsx` | Transfer SOL with passkey |
 
 ## 🔧 Prerequisites
 

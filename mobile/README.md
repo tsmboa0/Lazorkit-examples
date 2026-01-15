@@ -13,12 +13,12 @@ Scan the QR code with Expo Go app on your phone.
 
 ## Examples
 
-| Tab | Description |
-|-----|-------------|
-| **Home** | Welcome screen with overview |
-| **Connect** | Passkey wallet authentication |
-| **Balance** | View SOL balance with refresh |
-| **Send** | Transfer SOL with gasless transaction |
+| Tab | File | Description |
+|-----|------|-------------|
+| **Home** | `index.tsx` | Welcome screen with overview |
+| **Connect** | `01-connect-wallet.tsx` | Passkey wallet authentication |
+| **Balance** | `02-check-balance.tsx` | View SOL balance with refresh |
+| **Send** | `03-send-sol.tsx` | Transfer SOL with gasless transaction |
 
 ## Testing
 
@@ -38,16 +38,15 @@ Scan the QR code with Expo Go app on your phone.
 mobile/
 ├── app/
 │   ├── (tabs)/
-│   │   ├── _layout.tsx    # Tab navigation
-│   │   ├── index.tsx      # Home screen
-│   │   ├── connect.tsx    # Example 1
-│   │   ├── balance.tsx    # Example 2
-│   │   └── send.tsx       # Example 3
-│   └── _layout.tsx        # Root layout
+│   │   ├── _layout.tsx            # Tab navigation
+│   │   ├── index.tsx              # Home screen
+│   │   ├── 01-connect-wallet.tsx  # Example 1: Connect
+│   │   ├── 02-check-balance.tsx   # Example 2: Balance
+│   │   └── 03-send-sol.tsx        # Example 3: Send
+│   └── _layout.tsx                # Root layout
 ├── lib/
-│   ├── constants.ts       # Config & colors
-│   ├── solana.ts          # Solana utilities
-│   └── LazorkitProvider.tsx
+│   ├── constants.ts               # Config & colors
+│   └── solana.ts                  # Solana utilities
 └── package.json
 ```
 

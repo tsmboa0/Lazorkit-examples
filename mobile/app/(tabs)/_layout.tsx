@@ -7,9 +7,9 @@
  * 
  * TABS:
  * 1. Home - Welcome screen with overview
- * 2. Connect - Wallet connection example
- * 3. Balance - Check SOL balance example
- * 4. Send - Transfer SOL example
+ * 2. 01-connect-wallet - Wallet connection example
+ * 3. 02-check-balance - Check SOL balance example
+ * 4. 03-send-sol - Transfer SOL example
  * =============================================================================
  */
 
@@ -105,38 +105,38 @@ export default function TabLayout() {
       />
 
       {/* ==========================================
-          TAB 2: CONNECT WALLET
+          TAB 2: CONNECT WALLET (Example 1)
           ========================================== */}
       <Tabs.Screen
-        name="connect"
+        name="01-connect-wallet"
         options={{
           title: "Connect",
           tabBarIcon: ({ color }) => <TabBarIcon name="lock" color={color} />,
-          headerTitle: "Connect Wallet",
+          headerTitle: "Example 1: Connect Wallet",
         }}
       />
 
       {/* ==========================================
-          TAB 3: VIEW BALANCE
+          TAB 3: CHECK BALANCE (Example 2)
           ========================================== */}
       <Tabs.Screen
-        name="balance"
+        name="02-check-balance"
         options={{
           title: "Balance",
           tabBarIcon: ({ color }) => <TabBarIcon name="credit-card" color={color} />,
-          headerTitle: "Check Balance",
+          headerTitle: "Example 2: Check Balance",
         }}
       />
 
       {/* ==========================================
-          TAB 4: SEND SOL
+          TAB 4: SEND SOL (Example 3)
           ========================================== */}
       <Tabs.Screen
-        name="send"
+        name="03-send-sol"
         options={{
           title: "Send",
           tabBarIcon: ({ color }) => <TabBarIcon name="send" color={color} />,
-          headerTitle: "Send SOL",
+          headerTitle: "Example 3: Send SOL",
         }}
       />
     </Tabs>
